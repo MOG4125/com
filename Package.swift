@@ -12,10 +12,10 @@ let package = Package(
             name: "MyApp",
             targets: ["AppSource"],
             bundleIdentifier: "com.freecompiler.myapp",
-            teamIdentifier: "0000000000", // Leaves placeholder for unsigned builds
+            teamIdentifier: "0000000000",
             displayVersion: "1.0",
             bundleVersion: "1",
-            supportedDeviceFamilies: [.pad, .iphone],
+            supportedDeviceFamilies: [.pad, .iPhone], // <-- Fixed capital P here
             supportedInterfaceOrientations: [.portrait, .landscapeLeft, .landscapeRight]
         )
     ],
