@@ -1,24 +1,9 @@
-name: Compile IPA
-
-on:
-  workflow_dispatch: # Allows you to press a button on GitHub to trigger the build
-
-jobs:
-  build:
-    runs-on: macos-14 # Assigns a free M1 cloud Mac runner
-
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
-
-    - name: Select Xcode Version
-      run: sudo xcode-select -s /Applications/Xcode_15.4.app
-
     - name: Compile and Archive App
       run: |
         xcodebuild archive \
-          -packagepath . \
+          -workspace . \
           -scheme MyApp \
+          -destination "generic/platform=iOS" \
           -archivePath ./build/MyApp.xcarchive \
           CODE_SIGNING_ALLOWED=NO \
           CODE_SIGNING_REQUIRED=NO
@@ -29,10 +14,5 @@ jobs:
           -archivePath ./build/MyApp.xcarchive \
           -exportPath ./build/output \
           -exportOptionsPlist ExportOptions.plist \
+          -destination "generic/platform=iOS" \
           CODE_SIGNING_ALLOWED=NO
-
-    - name: Upload IPA to GitHub Artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: Compiled-App-Package
-        path: ./build/output/*.ipa
