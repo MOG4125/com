@@ -1,10 +1,10 @@
-# Free Cloud iOS IPA Compiler 🚀
+# com
 
 A lightweight, minimal configuration template designed to compile an iOS `.ipa` application completely in the cloud for free. 
 
 This workflow uses **Swift Package Manager (SPM)** to entirely bypass bulky Xcode `.xcodeproj` configurations, allowing you to develop, build, and export an iOS app bundle using nothing but an iPad web browser and plain text files.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── .github/
@@ -17,7 +17,7 @@ This workflow uses **Swift Package Manager (SPM)** to entirely bypass bulky Xcod
 └── README.md               # This documentation file
 ```
 
-## 🛠️ How to Compile Your App
+## How to Compile Your App
 
 You do not need a Mac or a paid Apple Developer Account to compile this project. GitHub's free automation servers handle the entire build process.
 
@@ -29,7 +29,7 @@ You do not need a Mac or a paid Apple Developer Account to compile this project.
 6. Click on the completed run (e.g., *"Compile IPA #1"*).
 7. Scroll down to the **Artifacts** section at the bottom of the summary page and click **Compiled-App-Package** to download your ready-to-use `.ipa` file directly to your iPad's Files app.
 
-## ⚠️ Important Configuration & Signing Details
+## Important Configuration & Signing Details
 
 * **Unsigned Build:** Because this project uses a free, automated workflow without paid signing certificates, the generated `.ipa` file is **unsigned**. 
 * **Installation:** You cannot install this `.ipa` via standard App Store methods. To test and install this app on your retail iPad, you must use community-sideloading tools like **TrollStore** (on compatible iPadOS versions), **SideStore**, or **AltStore**.
