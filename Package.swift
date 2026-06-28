@@ -15,7 +15,7 @@ let package = Package(
             teamIdentifier: "0000000000",
             displayVersion: "1.0",
             bundleVersion: "1",
-            supportedDeviceFamilies: [.pad, .iPhone], // <-- Fixed capital P here
+            supportedDeviceFamilies: [.pad, .phone], // <-- Change this to .phone
             supportedInterfaceOrientations: [.portrait, .landscapeLeft, .landscapeRight]
         )
     ],
